@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block head%}
+<h1>Page Two</h1>
+{% endblock %}
+{% block content%}
+<ul>
+    {% for product in products %}
+    <li>{{ product.id }} - {{ product.name }} - {{ product.catfk }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+{% block url %}
+<a href="{% url 'one' %}">One -></a>
+{% endblock %}

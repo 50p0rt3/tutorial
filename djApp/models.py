@@ -6,7 +6,7 @@ from djApp.choices import gender_choices
 class Category(models.Model):
     name=models.CharField(max_length=100,unique=True)
     def __str__(self):
-        return 'Name: {}'.format(self.name)
+        return self.name
     
     class Meta:
         verbose_name='Category'
