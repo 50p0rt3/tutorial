@@ -1,0 +1,40 @@
+{% extends '../base/body.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col">
+      <div class="card card-default">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="fas fa-search"></i>
+            {{ title }}
+          </h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table class="table table-striped text-center">
+            <thead>
+                {% block columns %}
+                {% endblock %}
+            </thead>
+            <tbody>  
+              {% for cat in categories %}
+                {% block rows %}
+                {% endblock%}
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer text-center">
+          <button class="btn btn-success">
+            <i class="fas fa-plus"></i>
+            Add
+          </button>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+    <!-- /.col -->
+  </div>
+  {% endblock %}

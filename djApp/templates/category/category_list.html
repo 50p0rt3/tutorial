@@ -1,0 +1,23 @@
+{% extends '../base/list.html' %}
+
+{% block columns %}
+<tr>
+  <th scope="col">ID</th>
+  <th scope="col">Name</th>
+  <th scope="col">Options</th>
+</tr>
+{% endblock %}
+
+{% block rows %}<tr>
+<th scope="row">{{cat.id}}</th>
+  <td>{{cat.name}}</td>
+  <td>
+    <button class="btn btn-primary" type="button">
+      <i class="fas fa-edit"></i>
+    </button>
+    <button class="btn btn-danger" type="button">
+      <i class="fas fa-trash"></i>
+    </button>
+  </td>
+</tr>
+{% endblock %}
